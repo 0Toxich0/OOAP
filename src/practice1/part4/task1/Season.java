@@ -1,30 +1,15 @@
 package practice1.part4.task1;
 
 public enum Season {
-    WINTER(-10) {
-        @Override
-        public String getDescription() {
-            return "Холодное время года";
-        }
-    },
-    SPRING(10) {
-        @Override
-        public String getDescription() {
-            return "Холодное время года";
-        }
-    },
+    WINTER(-10),
+    SPRING(10),
     SUMMER(25) {
         @Override
         public String getDescription() {
             return "Тёплое время года";
         }
     },
-    AUTUMN(8) {
-        @Override
-        public String getDescription() {
-            return "Холодное время года";
-        }
-    };
+    AUTUMN(8);
 
     private final int averageTemperature;
 
@@ -36,10 +21,12 @@ public enum Season {
         return averageTemperature;
     }
 
-    public abstract String getDescription(); // метод для переопределения
+    public String getDescription() {
+        return "Холодное время года";
+    }
 
     @Override
     public String toString() {
-        return name() + " (средняя температура: " + averageTemperature + "°C, " + getDescription() + ")";
+        return name() + " (" + averageTemperature + "°C, " + getDescription() + ")";
     }
 }

@@ -16,40 +16,28 @@ public class MovableRectangle implements Movable {
 
     @Override
     public void moveUp() {
-        if (!checkSpeed()) {
-            System.out.println("Скорости не совпадают");
-            return;
-        }
+        if (!checkSpeed()) throw new IllegalArgumentException("Скорости точек не совпадают");
         topLeft.moveUp();
         bottomRight.moveUp();
     }
 
     @Override
     public void moveDown() {
-        if (!checkSpeed()) {
-            System.out.println("Скорости не совпадают");
-            return;
-        }
+        if (!checkSpeed()) throw new IllegalArgumentException("Скорости точек не совпадают");
         topLeft.moveDown();
         bottomRight.moveDown();
     }
 
     @Override
     public void moveLeft() {
-        if (!checkSpeed()) {
-            System.out.println("Скорости не совпадают");
-            return;
-        }
+        if (!checkSpeed()) throw new IllegalArgumentException("Скорости точек не совпадают");
         topLeft.moveLeft();
         bottomRight.moveLeft();
     }
 
     @Override
     public void moveRight() {
-        if (!checkSpeed()) {
-            System.out.println("Скорости не совпадают");
-            return;
-        }
+        if (!checkSpeed()) throw new IllegalArgumentException("Скорости точек не совпадают");
         topLeft.moveRight();
         bottomRight.moveRight();
     }

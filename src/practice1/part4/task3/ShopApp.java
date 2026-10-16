@@ -3,7 +3,6 @@ package practice1.part4.task3;
 import java.util.*;
 
 public class ShopApp {
-    // каталоги товаров
     private static final Map<String, List<String>> catalog = new LinkedHashMap<>();
     private static final List<String> cart = new ArrayList<>();
     private static final Scanner scanner = new Scanner(System.in);
@@ -17,7 +16,7 @@ public class ShopApp {
 
     public static void main(String[] args) {
         System.out.println("Добро пожаловать в интернет-магазин!");
-        // Аутентификация
+
         if (!authenticate()) {
             System.out.println("Неверный логин или пароль. Выход.");
             return;
@@ -44,29 +43,16 @@ public class ShopApp {
                 scanner.nextLine();
                 continue;
             }
-            scanner.nextLine(); // consume newline
+            scanner.nextLine();
 
             switch (choice) {
-                case 1:
-                    showCatalogs();
-                    break;
-                case 2:
-                    showProductsInCatalog();
-                    break;
-                case 3:
-                    addToCart();
-                    break;
-                case 4:
-                    showCart();
-                    break;
-                case 5:
-                    checkout();
-                    break;
-                case 0:
-                    exit = true;
-                    break;
-                default:
-                    System.out.println("Некорректный ввод. Попробуйте снова.");
+                case 1: showCatalogs(); break;
+                case 2: showProductsInCatalog(); break;
+                case 3: addToCart(); break;
+                case 4: showCart(); break;
+                case 5: checkout(); break;
+                case 0: exit = true; break;
+                default: System.out.println("Некорректный ввод. Попробуйте снова.");
             }
         }
         System.out.println("Спасибо за покупку!");
@@ -77,7 +63,6 @@ public class ShopApp {
         String login = scanner.nextLine();
         System.out.print("Введите пароль: ");
         String password = scanner.nextLine();
-        // логин admin, пароль 123
         return "admin".equals(login) && "123".equals(password);
     }
 
@@ -105,8 +90,13 @@ public class ShopApp {
     private static void addToCart() {
         System.out.print("Введите название товара: ");
         String product = scanner.nextLine();
-        // есть ли такой товар хотя бы в одном каталоге
-        boolean found = catalog.values().stream().anyMatch(list -> list.contains(product));
+        boolean found = false;
+        for (List<String> list : catalog.values()) {
+            if (list.contains(product)) {
+                found = true;
+                break;
+            }
+        }
         if (found) {
             cart.add(product);
             System.out.println("Товар \"" + product + "\" добавлен в корзину.");
