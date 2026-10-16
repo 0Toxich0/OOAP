@@ -12,9 +12,9 @@ public class Book implements Printable {
         System.out.println("Книга: " + name);
     }
 
-    // Задание 8: Статический метод с instanceof
+    // задание 8
     public static void printBooks(Printable[] printables) {
-        System.out.println("--- Список книг ---");
+        System.out.println("Список книг");
         for (Printable p : printables) {
             if (p instanceof Book) {
                 p.print();

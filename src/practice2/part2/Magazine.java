@@ -12,9 +12,9 @@ public class Magazine implements Printable {
         System.out.println("Журнал: " + name);
     }
 
-    // Задание 7: Статический метод
+    // задание 7
     public static void printMagazines(Printable[] printables) {
-        System.out.println("--- Список журналов ---");
+        System.out.println("Список журналов");
         for (Printable p : printables) {
             if (p instanceof Magazine) {
                 p.print();

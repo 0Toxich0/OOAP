@@ -2,8 +2,8 @@ package practice2.part2;
 
 public class TestMovable {
     public static void main(String[] args) {
-        // --- Задания 1-3: Movable ---
-        System.out.println("=== Задания 1-3: Movable ===");
+        // задания 1-3
+        System.out.println("Задания 1-3: Movable");
         MovableRectangle rect = new MovableRectangle(0, 10, 10, 0, 2, 2);
         System.out.println("До: " + rect);
         System.out.println("Скорости одинаковые? " + rect.SpeedTest());
@@ -11,8 +11,8 @@ public class TestMovable {
         rect.moveRight();
         System.out.println("После: " + rect);
 
-        // --- Задание 4: MathCalculable ---
-        System.out.println("\n=== Задание 4: MathCalculable ===");
+        // задание 4
+        System.out.println("\nЗадание 4: MathCalculable");
         MathCalculable mc1 = new MathFunc(); // Правильно
         // MathCalculable mc2 = new MathCalculable(); // Ошибка - нельзя создать экземпляр интерфейса
         MathFunc mathFunc = new MathFunc();
@@ -22,8 +22,8 @@ public class TestMovable {
         System.out.println("Длина окружности радиусом 5: " + mathFunc.circumference(5));
         System.out.println("Число PI из интерфейса: " + MathCalculable.PI);
 
-        // --- Задания 5-6: StringProcessor ---
-        System.out.println("\n=== Задания 5-6: StringProcessor ===");
+        // задания 5-6
+        System.out.println("\nЗадания 5-6: StringProcessor");
         ProcessStrings ps = new ProcessStrings();
         String testStr = "Программирование";
         System.out.println("Исходная строка: " + testStr);
@@ -31,8 +31,8 @@ public class TestMovable {
         System.out.println("Символы на нечетных позициях: " + ps.getOddChars(testStr));
         System.out.println("Инвертированная строка: " + ps.reverse(testStr));
 
-        // --- Задания 7-8: Printable, instanceof ---
-        System.out.println("\n=== Задания 7-8: Printable ===");
+        // задания 7-8
+        System.out.println("\nЗадания 7-8: Printable");
         Printable[] printables = {
                 new Book("Война и мир"),
                 new Magazine("Хакер"),

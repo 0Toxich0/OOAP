@@ -33,7 +33,7 @@ public class MovableRectangle implements Movable {
         bottomRight.moveRight();
     }
 
-    // Задание 3: Логический метод SpeedTest()
+    // задание 3
     public boolean SpeedTest() {
         return topLeft.getXSpeed() == bottomRight.getXSpeed() &&
                 topLeft.getYSpeed() == bottomRight.getYSpeed();

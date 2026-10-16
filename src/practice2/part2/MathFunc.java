@@ -12,7 +12,7 @@ public class MathFunc implements MathCalculable {
         return Math.sqrt(real * real + imaginary * imaginary);
     }
 
-    // Пример: вычисление длины окружности
+    // пример вычисление длины окружности
     public double circumference(double radius) {
         return 2 * PI * radius;
     }

@@ -27,7 +27,7 @@ public class MovablePoint implements Movable {
         return "MovablePoint(" + x + ", " + y + ")";
     }
 
-    // Геттеры для проверки скорости в MovableRectangle
+    // геттеры для проверки скорости
     public int getXSpeed() { return xSpeed; }
     public int getYSpeed() { return ySpeed; }
 }

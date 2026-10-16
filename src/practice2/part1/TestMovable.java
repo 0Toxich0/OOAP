@@ -2,8 +2,8 @@ package practice2.part1;
 
 public class TestMovable {
     public static void main(String[] args) {
-        // --- Задания 1–5: Movable ---
-        System.out.println("=== Movable ===");
+        // задания 1–5
+        System.out.println("Movable");
         MovablePoint point = new MovablePoint(0, 0, 2, 3);
         System.out.println("До: " + point);
         point.moveUp();
@@ -22,8 +22,8 @@ public class TestMovable {
         rect.moveRight();
         System.out.println("После: " + rect);
 
-        // --- Задания 6–9: Printable ---
-        System.out.println("\n=== Printable ===");
+        // задания 6–9
+        System.out.println("\nPrintable");
         Printable[] printables = {
                 new Book("Java. Полное руководство"),
                 new Shop("DNS"),
@@ -34,8 +34,8 @@ public class TestMovable {
             p.print();
         }
 
-        // --- Задание 10: Интернет-магазин ---
-        System.out.println("\n=== Интернет-магазин ===");
+        // задание 10
+        System.out.println("\nИнтернет-магазин");
         Computer comp1 = new Computer("Ноутбук ASUS", 75000);
         Computer comp2 = new Computer("Монитор Dell", 25000);
         System.out.println(comp1.getName() + " — " + comp1.getPrice() + " руб.");
