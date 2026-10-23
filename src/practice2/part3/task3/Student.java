@@ -13,7 +13,7 @@ public class Student {
         this.birthDate = birthDate;
     }
 
-    // Метод возвращает строку с датой рождения в заданном стиле
+    // дата рождения со стилем
     public String getFormattedBirthDate(int style) {
         DateFormat df = DateFormat.getDateInstance(style, Locale.getDefault());
         return df.format(birthDate);

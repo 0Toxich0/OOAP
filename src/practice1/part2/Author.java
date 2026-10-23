@@ -1,14 +1,11 @@
 package practice1.part2;
 
 public class Author {
-    private final String name;
+    private String name;
     private String email;
-    private final char gender;
+    private char gender;
 
     public Author(String name, String email, char gender) {
-        if (gender != 'M' && gender != 'F' && gender != 'U') {
-            throw new IllegalArgumentException("Пол должен быть 'M', 'F' или 'U'");
-        }
         this.name = name;
         this.email = email;
         this.gender = gender;
@@ -17,11 +14,10 @@ public class Author {
     public String getName() { return name; }
     public String getEmail() { return email; }
     public char getGender() { return gender; }
-
     public void setEmail(String email) { this.email = email; }
 
     @Override
     public String toString() {
-        return name + " (" + Character.toLowerCase(gender) + ") at " + email;
+        return name + " (" + gender + ") at " + email;
     }
 }

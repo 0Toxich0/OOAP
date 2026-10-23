@@ -10,7 +10,7 @@ public class UserDateInput {
 
         System.out.println("Введите год, месяц (1-12), день, часы и минуты:");
         int year = scanner.nextInt();
-        int month = scanner.nextInt() - 1; // в Calendar месяцы с 0
+        int month = scanner.nextInt() - 1; // месяцы с 0
         int day = scanner.nextInt();
         int hour = scanner.nextInt();
         int minute = scanner.nextInt();

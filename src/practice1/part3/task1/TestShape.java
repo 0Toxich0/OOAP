@@ -2,6 +2,10 @@ package practice1.part3.task1;
 
 public class TestShape {
     public static void main(String[] args) {
+        // ОБЪЯСНЕНИЕ ОШИБОК
+        // s1.getRadius() ошибка компиляции у класса Shape нет метода getRadius()
+        // Shape s2 = new Shape() ошибка Shape абстрактный нельзя создать объект
+        // s3.getLength() ошибка у класса Shape нет метода getLength()
 
         Shape s1 = new Circle(5.5, "RED", false);
         System.out.println(s1);
