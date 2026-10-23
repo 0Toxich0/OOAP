@@ -9,15 +9,19 @@ public class ProcessStrings implements StringProcessor {
 
     @Override
     public String getOddChars(String s) {
-        StringBuilder sb = new StringBuilder();
+        String result = "";
         for (int i = 0; i < s.length(); i += 2) {
-            sb.append(s.charAt(i));
+            result += s.charAt(i);
         }
-        return sb.toString();
+        return result;
     }
 
     @Override
     public String reverse(String s) {
-        return new StringBuilder(s).reverse().toString();
+        String result = "";
+        for (int i = s.length() - 1; i >= 0; i--) {
+            result += s.charAt(i);
+        }
+        return result;
     }
 }

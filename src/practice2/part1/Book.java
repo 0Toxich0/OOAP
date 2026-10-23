@@ -1,14 +1,18 @@
 package practice2.part1;
 
 public class Book implements Printable {
-    private String title;
+    String name;
+    String author;
+    int year;
 
-    public Book(String title) {
-        this.title = title;
+    public Book(String name, String author, int year) {
+        this.name = name;
+        this.author = author;
+        this.year = year;
     }
 
     @Override
     public void print() {
-        System.out.println("Книга: " + title);
+        System.out.printf("Книга '%s' (автор %s) была издана в %d году \n", name, author, year);
     }
 }

@@ -9,6 +9,11 @@ public class MovableRectangle implements Movable {
         this.bottomRight = new MovablePoint(x2, y2, xSpeed, ySpeed);
     }
 
+    public boolean checkSpeed() {
+        return topLeft.getXSpeed() == bottomRight.getXSpeed() &&
+                topLeft.getYSpeed() == bottomRight.getYSpeed();
+    }
+
     @Override
     public void moveUp() {
         topLeft.moveUp();
@@ -31,12 +36,6 @@ public class MovableRectangle implements Movable {
     public void moveRight() {
         topLeft.moveRight();
         bottomRight.moveRight();
-    }
-
-    // Метод проверки одинаковой скорости
-    private boolean isSameSpeed() {
-        return topLeft.getXSpeed() == bottomRight.getXSpeed() &&
-                topLeft.getYSpeed() == bottomRight.getYSpeed();
     }
 
     @Override

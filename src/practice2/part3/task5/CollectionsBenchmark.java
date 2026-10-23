@@ -20,34 +20,34 @@ public class CollectionsBenchmark {
         List<Integer> arrayList = new ArrayList<>();
         List<Integer> linkedList = new LinkedList<>();
 
-        long start = System.nanoTime();
+        long start = System.currentTimeMillis();
         for (int i = 0; i < N; i++) arrayList.add(i);
-        long timeArrayList = System.nanoTime() - start;
+        long timeArrayList = System.currentTimeMillis() - start;
 
-        start = System.nanoTime();
+        start = System.currentTimeMillis();
         for (int i = 0; i < N; i++) linkedList.add(i);
-        long timeLinkedList = System.nanoTime() - start;
+        long timeLinkedList = System.currentTimeMillis() - start;
 
         System.out.println("1. Добавление в конец (add):");
-        System.out.printf("   ArrayList:  %d ns%n", timeArrayList);
-        System.out.printf("   LinkedList: %d ns%n%n", timeLinkedList);
+        System.out.println("   ArrayList:  " + timeArrayList + " ms");
+        System.out.println("   LinkedList: " + timeLinkedList + " ms\n");
     }
 
     private static void testAddToBeginning() {
         List<Integer> arrayList = new ArrayList<>();
         List<Integer> linkedList = new LinkedList<>();
 
-        long start = System.nanoTime();
+        long start = System.currentTimeMillis();
         for (int i = 0; i < N; i++) arrayList.add(0, i);
-        long timeArrayList = System.nanoTime() - start;
+        long timeArrayList = System.currentTimeMillis() - start;
 
-        start = System.nanoTime();
+        start = System.currentTimeMillis();
         for (int i = 0; i < N; i++) linkedList.add(0, i);
-        long timeLinkedList = System.nanoTime() - start;
+        long timeLinkedList = System.currentTimeMillis() - start;
 
         System.out.println("2. Вставка в начало (add(0, element)):");
-        System.out.printf("   ArrayList:  %d ns%n", timeArrayList);
-        System.out.printf("   LinkedList: %d ns%n%n", timeLinkedList);
+        System.out.println("   ArrayList:  " + timeArrayList + " ms");
+        System.out.println("   LinkedList: " + timeLinkedList + " ms\n");
     }
 
     private static void testSearch() {
@@ -58,17 +58,17 @@ public class CollectionsBenchmark {
             linkedList.add(i);
         }
 
-        long start = System.nanoTime();
+        long start = System.currentTimeMillis();
         arrayList.contains(N - 1);
-        long timeArrayList = System.nanoTime() - start;
+        long timeArrayList = System.currentTimeMillis() - start;
 
-        start = System.nanoTime();
+        start = System.currentTimeMillis();
         linkedList.contains(N - 1);
-        long timeLinkedList = System.nanoTime() - start;
+        long timeLinkedList = System.currentTimeMillis() - start;
 
         System.out.println("3. Поиск (contains):");
-        System.out.printf("   ArrayList:  %d ns%n", timeArrayList);
-        System.out.printf("   LinkedList: %d ns%n%n", timeLinkedList);
+        System.out.println("   ArrayList:  " + timeArrayList + " ms");
+        System.out.println("   LinkedList: " + timeLinkedList + " ms\n");
     }
 
     private static void testRemoveFromBeginning() {
@@ -79,16 +79,16 @@ public class CollectionsBenchmark {
             linkedList.add(i);
         }
 
-        long start = System.nanoTime();
+        long start = System.currentTimeMillis();
         arrayList.remove(0);
-        long timeArrayList = System.nanoTime() - start;
+        long timeArrayList = System.currentTimeMillis() - start;
 
-        start = System.nanoTime();
+        start = System.currentTimeMillis();
         linkedList.remove(0);
-        long timeLinkedList = System.nanoTime() - start;
+        long timeLinkedList = System.currentTimeMillis() - start;
 
         System.out.println("4. Удаление из начала (remove(0)):");
-        System.out.printf("   ArrayList:  %d ns%n", timeArrayList);
-        System.out.printf("   LinkedList: %d ns%n", timeLinkedList);
+        System.out.println("   ArrayList:  " + timeArrayList + " ms");
+        System.out.println("   LinkedList: " + timeLinkedList + " ms");
     }
 }
