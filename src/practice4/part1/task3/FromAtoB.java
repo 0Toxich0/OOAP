@@ -10,9 +10,13 @@ public class FromAtoB {
 
     public static void printRange(int a, int b) {
         System.out.print(a + " ");
+
+        // дошли до конца останавливаемся
         if (a == b) {
             return;
         }
+
+        // если А меньше В идем вверх иначе вниз
         if (a < b) {
             printRange(a + 1, b);
         } else {

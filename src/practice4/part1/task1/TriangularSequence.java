@@ -6,11 +6,18 @@ public class TriangularSequence {
     }
 
     public static void printTriangular(int n) {
-        int count = 0;
-        for (int i = 1; count < n; i++) {
-            for (int j = 1; j <= i && count < n; j++) {
-                System.out.print(i + " ");
-                count++;
+        int count = 0;            // сколько уже вывели
+        int number = 1;           // текущее число
+        int printedForNumber = 0; // сколько раз его вывели
+
+        for (int i = 0; i < n; i++) {
+            System.out.print(number + " ");
+            printedForNumber++;
+
+            // если напечатали число нужное количество раз берем следующее
+            if (printedForNumber == number) {
+                number++;
+                printedForNumber = 0;
             }
         }
     }
